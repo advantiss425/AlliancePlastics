@@ -36,10 +36,13 @@ const MainDrawerNavigator = () => {
   return (
     <Drawer.Navigator
       initialRouteName="Home"
-      drawerContent={(props) => <AppDrawerContent {...props} />}
-      drawerStyle={{
-        borderTopRightRadius: 50,
-      }}>
+      screenOptions={{
+        headerShown: false,
+        drawerStyle: {
+          borderTopRightRadius: 50
+        }
+      }}
+      drawerContent={(props) => <AppDrawerContent {...props} />}>
 
       <Drawer.Screen name="Home" component={HomeScreen} />
 
